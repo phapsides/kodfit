@@ -4,7 +4,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-        Welcome to Kodfit!!!
+        <h1>Welcome to Kodfit!!!</h1>
     </div>
   );
 }
