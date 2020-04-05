@@ -1,0 +1,67 @@
+.LandingPage .hero {
+    position: relative;
+}
+
+.LandingPage .hero-overlay {
+    text-align: center;
+    left: 50%;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    z-index: 0;
+}
+
+.LandingPage .hero-overlay h1 {
+    color: #fff;
+    font-size: 9vw;
+}
+
+.LandingPage .hero-image {
+    display: block;
+    z-index: -1;
+}
+
+.LandingPage .btn {
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 1.45;
+    padding: 0.9rem 2.75rem;
+    text-transform: uppercase;
+}
+
+.LandingPage .btn-transparent {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.LandingPage .rounded-capsule {
+    border-radius: 3rem;
+}
+
+.LandingPage a.read-more {
+    display: block;
+    color: rgba(68, 120, 255, 0.85);
+} 
+
+.LandingPage img {
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+}
+
+.LandingPage h4 {
+    font-size: 1.8rem;
+    margin-bottom: 1.8rem;
+}
+
+.LandingPage p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+.LandingPage img.descriptive {
+    margin-top: 1.8rem;
+}
