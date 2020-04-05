@@ -1,20 +1,22 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css';
+import './Layout.css';
 import CalendarApp from './CalendarApp/CalendarApp';
+import LandingPage from './LandingPage/LandingPage';
 
 function App() {
-  return (
-    <div className="App">
-        <h1>Kodfit</h1>
+	return (
+		<div className="App">
+			<h1>Kodfit</h1>
 
-        <BrowserRouter>
-          <Route path="/calendar" exact component={CalendarApp} />
-        </BrowserRouter>
+			<BrowserRouter>
+				<Route path="/calendar" exact component={CalendarApp} />
+				<Route path="/landing-page" exact component={LandingPage} />
+			</BrowserRouter>
 
-
-    </div>
-  );
+		</div>
+	);
 }
 
 export default App;
