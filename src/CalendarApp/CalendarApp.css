@@ -18,13 +18,13 @@
   }
 
 .calendarContent {
-      display: flex;
-      max-width: 100%;
-      flex-basis: 420px;
-      flex-direction: column;
-      flex-grow: 100;
-      align-items: stretch;
-      padding: 1%;
+    display: flex;
+    max-width: 100%;
+    flex-basis: 420px;
+    flex-direction: column;
+    flex-grow: 100;
+    align-items: stretch;
+    padding: 1%;
     }
 
 .react-calendar__navigation__arrow {
@@ -66,9 +66,9 @@
 }
 
 .react-calendar__month-view__weekdays {
-        margin-top: 10px;
-        font-size: 10px;
-        padding: 5px;
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 5px;
     }
 
 .react-calendar__month-view__days {
