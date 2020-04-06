@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 import CalendarApp from './CalendarApp/CalendarApp';
 
@@ -8,9 +8,9 @@ function App() {
     <div className="App">
         <h1>Kodfit</h1>
 
-        <BrowserRouter>
+        <Router>
           <Route path="/calendar" exact component={CalendarApp} />
-        </BrowserRouter>
+        </Router>
 
 
     </div>
