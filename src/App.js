@@ -1,21 +1,21 @@
 import React from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import BottomNavBar from './BottomNavBar/BottomNavBar';
+import { BrowserRouter as Router} from 'react-router-dom';
 import './App.css';
 import CalendarApp from './CalendarApp/CalendarApp';
 import Timer from './Timer/Timer';
 
 function App() {
   return (
-    <div className="App">
-        <h1>Kodfit</h1>
-
-        <BrowserRouter>
+    <Router>
+      <div className="App">
+          <h1>Welcome to Kodfit!!!</h1>
           <Route path="/calendar" exact component={CalendarApp} />
           <Route path="/timer" exact component={Timer} />
-        </BrowserRouter>
+          <BottomNavBar />
+        </div>
+    </Router>
 
-
-    </div>
   );
 }
 
