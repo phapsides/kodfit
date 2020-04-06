@@ -21,6 +21,7 @@ export default function CalendarApp() {
             minDate={new Date(2020, 0, 1)}
             maxDate={new Date(2020, 11, 31)}
             showNeighboringMonth={false}
+            minDetail={'year'}
             prev2Label={null}
             nextLabel={'▶︎'}
             prevLabel={'◀︎'}
