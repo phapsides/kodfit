@@ -13,6 +13,8 @@ import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import NearMe from './NearMe/NearMe';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
+import Timer from './Timer/Timer';
+import LandingPage from './LandingPage/LandingPage';
 function App() {
 	return (
 		<Router>
@@ -28,6 +30,7 @@ function App() {
 				<Route path="/tracker" exact component={Tracker} />
 				<Route path="/login" exact component={Login} />
 				<Route path="/timer" exact component={Timer} />
+				<Route path="/landing-page" exact component={LandingPage} />
 				<BottomNavBar />
 			</div>
 		</Router>
