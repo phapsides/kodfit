@@ -23,8 +23,19 @@
 
 .HeroBanner .hero-image {
     display: block;
+    z-index: -1;   
+}
+
+.HeroBanner .filter:after {
+    content: "";
+    display: block;
+    position: absolute;
     z-index: -1;
-    filter: brightness(80%);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
 }
 
 .HeroBanner .btn {
@@ -44,3 +55,4 @@
 .HeroBanner .rounded-capsule {
     border-radius: 3rem;
 }
+
