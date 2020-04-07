@@ -73,7 +73,7 @@ class Timer extends React.Component {
             seconds: seconds,
         });
 
-        if (seconds == 0) {
+        if (seconds === 0) {
             clearInterval(this.timer);
         }
     }

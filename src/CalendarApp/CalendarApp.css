@@ -1,5 +1,5 @@
 .calendarTitle {
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     color: grey;
     font-size: 18px;
     margin: 0;
@@ -29,7 +29,8 @@
 
 .react-calendar__navigation__arrow {
     font-size: 16px;
-    padding: 1px 15px;
+    height: 26px;
+    padding: 0 15px;
     border: none;
     color: rgb(90, 90, 250);
 }
@@ -38,7 +39,7 @@
     font-size: 14px;
     font-weight: bold;
     border: none;
-    height: 24px;
+    height: 26px;
 }
 
 .react-calendar__tile {
@@ -73,6 +74,34 @@
 
 .react-calendar__month-view__days {
     margin-top: 5px;
+}
+
+
+.calendarWorkoutContainer .ContainerContent {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    
+}
+
+.ContainerContent .title {
+    color: grey;
+    margin-bottom: 0;
+    text-align: left;
+    margin-left: 2%;
+}
+
+.ContainerContent .button {
+    background-color: rgb(7, 168, 7);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    position: absolute;
+    padding: 3px 10px;
+    width: 90px;
+    border-radius: 35px;
+    right: 3%;
+    top: 18px;
 }
 
 
