@@ -14,6 +14,7 @@ import NearMe from './NearMe/NearMe';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
+import Notifications from './Notifications/Notifications';
 
 function App() {
 	return (
@@ -30,6 +31,7 @@ function App() {
 				<Route path="/tracker" exact component={Tracker} />
 				<Route path="/login" exact component={Login} />
 				<Route path="/timer" exact component={Timer} />
+				<Route path="/notifications" exact component={Notifications} />
 				<BottomNavBar />
 			</div>
 		</Router>

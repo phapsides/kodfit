@@ -73,25 +73,25 @@ class Timer extends React.Component {
             seconds: seconds,
         });
 
-        if (seconds == 0) {
+        if (seconds === 0) {
             clearInterval(this.timer);
         }
     }
 
     render() {
         return (
-            <div className="App">
+            <div className="Timer"> 
                 <div className="grid-container">
                     <div className="timer">
                         {this.state.time.m} : {this.state.time.s}
                     </div>
                     <div className="minutes">
                         Minutes
-                        <TimerInput field={(e) => this.handleTime(e,'inputMinutes',60) } />
+                        <TimerInput name="minutes" field={(e) => this.handleTime(e,'inputMinutes',60) } />
                     </div>
                     <div className="seconds">
                         Seconds
-                        <TimerInput field={(e) => this.handleTime(e,'inputSeconds',1) } />
+                        <TimerInput name="seconds" field={(e) => this.handleTime(e,'inputSeconds',1) } />
                     </div>
                     <div className="seconds">
                         <button
