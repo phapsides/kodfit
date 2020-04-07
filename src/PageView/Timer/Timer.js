@@ -48,13 +48,11 @@ class Timer extends React.Component {
     }
 
     startTimer = (secs) => {
-
         if (this.state.isRunning && this.state.seconds > 0) {
             this.setState({
                 isRunning: false
             });
             clearInterval(this.timer);
-
         } else {
             let total = +this.state.inputMinutes + +this.state.inputSeconds;
             if (total > 0) {
@@ -66,17 +64,14 @@ class Timer extends React.Component {
                 this.timer = setInterval(this.countDown, 1000);
             }
         }
-
     }
 
     countDown = (secs) => {
-
         let seconds = this.state.seconds - 1;
         this.setState({
             time: this.secondsToTime(seconds),
             seconds: seconds,
         });
-
         if (seconds === 0) {
             clearInterval(this.timer);
         }
