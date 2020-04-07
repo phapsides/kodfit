@@ -10,6 +10,7 @@ import WorkoutList from './WorkoutsMain/WorkoutList/WorkoutList';
 import WorkoutCurrent from './WorkoutsMain/WorkoutCurrent/WorkoutCurrent';
 import NearMe from './NearMe/NearMe';
 import Tracker from './Tracker/Tracker';
+import Timer from './Timer/Timer';
 import Login from './Login/Login';
 function App() {
 	return (
@@ -25,7 +26,7 @@ function App() {
 				<Route path="/workout-current" exact component={WorkoutCurrent} />
 				<Route path="/tracker" exact component={Tracker} />
 				<Route path="/login" exact component={Login} />
-        <Route path="/timer" exact component={Timer} />
+        		<Route path="/timer" exact component={Timer} />
 				<BottomNavBar />
 			</div>
 		</Router>

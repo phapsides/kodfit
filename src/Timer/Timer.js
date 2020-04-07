@@ -1,6 +1,7 @@
 import React from 'react';
 import TimerInput from './TimerInput/TimerInput';
 import './Timer.css';
+import { FaPlay , FaRegStopCircle} from 'react-icons/fa';
 
 class Timer extends React.Component {
     constructor() {
@@ -24,10 +25,13 @@ class Timer extends React.Component {
         let divisorForSeconds = divisorForMinutes % 60;
         let seconds = Math.ceil(divisorForSeconds);
 
+        let zeroAddedMinutes = ('0' + minutes).slice(-2);
+        let zeroAddedSeconds = ('0' + seconds).slice(-2);
+
         let obj = {
             "h": hours,
-            "m": minutes,
-            "s": seconds
+            "m": zeroAddedMinutes,
+            "s": zeroAddedSeconds
         };
         return obj;
     }
@@ -36,8 +40,8 @@ class Timer extends React.Component {
         const timeObject = {};
         timeObject[timeUnit] = e.target.value * modifier
         this.setState(timeObject)
-     }
-     
+    }
+
     componentDidMount() {
         let timeLeftVar = this.secondsToTime(this.state.seconds);
         this.setState({ time: timeLeftVar });
@@ -53,14 +57,14 @@ class Timer extends React.Component {
 
         } else {
             let total = +this.state.inputMinutes + +this.state.inputSeconds;
+            if (total > 0) {
+                this.setState({
+                    seconds: total,
+                    isRunning: true
+                });
 
-            this.setState({
-                seconds: total,
-                isRunning: true
-            });
-
-            this.timer = setInterval(this.countDown, 1000);
-
+                this.timer = setInterval(this.countDown, 1000);
+            }
         }
 
     }
@@ -73,30 +77,38 @@ class Timer extends React.Component {
             seconds: seconds,
         });
 
-        if (seconds == 0) {
+        if (seconds === 0) {
             clearInterval(this.timer);
         }
     }
 
     render() {
         return (
-            <div className="App">
+            <div className="Timer">
                 <div className="grid-container">
-                    <div className="timer">
-                        {this.state.time.m} : {this.state.time.s}
+                    <div className="digit-timer">
+                        <span className="digit-minutes">
+                            {this.state.time.m}
+                        </span>             
+                         :
+                        <span className="digit-minutes">
+                            {this.state.time.s}
+                        </span>
                     </div>
-                    <div className="minutes">
-                        Minutes
-                        <TimerInput field={(e) => this.handleTime(e,'inputMinutes',60) } />
+                    <div className="minutes column">
+                        <TimerInput field={(e) => this.handleTime(e, 'inputMinutes', 60)} />
+                        <span>Minutes</span>
                     </div>
-                    <div className="seconds">
-                        Seconds
-                        <TimerInput field={(e) => this.handleTime(e,'inputSeconds',1) } />
+                    <div className="seconds column">
+                        <TimerInput field={(e) => this.handleTime(e, 'inputSeconds', 1)} />
+                        <span>Seconds</span>
                     </div>
-                    <div className="seconds">
+                    <div className="submit">
                         <button
                             onClick={this.startTimer}>
-                            {this.state.isRunning && this.state.seconds ? "Stop" : "Start"}
+                            {this.state.isRunning && this.state.seconds ?
+                             <FaRegStopCircle  /> : 
+                             <FaPlay />}
                         </button>
                     </div>
                 </div>
