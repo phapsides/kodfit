@@ -1,6 +1,6 @@
 //This function holds some data for the mock exercises we have currently
 
-export default function getExerciseData() {
+export default function ExercisesData() {
       
     return [{    
         exerciseName: "Jumping Jacks",

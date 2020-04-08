@@ -12,7 +12,7 @@ function App() {
 	return (
 		<Router>
 			<div className="App">
-				<img src={logo} className="logo" />
+				<img src={logo} className="logo" alt="logo" />
 				<PageView />
 				<Route path="/" exact component={LandingPage} />
 			</div>
