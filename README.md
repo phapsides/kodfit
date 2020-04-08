@@ -1,1 +1,1 @@
-View the app here: https://kodiri.github.io/kodfit/
+View the app here: https://kodfit-lyart.now.sh/
