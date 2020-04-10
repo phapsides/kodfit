@@ -20,11 +20,18 @@
 .OurGoal .container .iconAndText {
     border: thin blue solid;
     display: flex;
+    align-items: center;
 }
 
 .OurGoal .container .iconAndText .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: thin red solid;
-    width: 20%;
+    border-radius: 50%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
 
 }
 

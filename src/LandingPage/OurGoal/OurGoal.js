@@ -3,9 +3,7 @@ import "./OurGoal.css";
 // import motivational from "../../common/images/ourGoal-motivational.jpg";
 // import jogger from "../../common/images/female-jogger.jpg";
 // import swimmer from "../../common/images/ourGoal-swimming.jpg";
-import { FaDumbbell } from "react-icons/fa";
-import { ReactComponent as progressIcon } from "../../common/images/progress-icon.svg";
-import { ReactComponent as heartbeatIcon } from "../../common/images/heartbeat-icon.svg";
+import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
 
 export default function OurGoal() {
   return (
@@ -26,12 +24,14 @@ export default function OurGoal() {
           <p>Put you in touch with gyms and trainers nearby</p>
         </div>
         <div className="iconAndText">
-          <div className="icon"><heartbeatIcon /></div>
+          {/* <div className="icon"><FaHeartbeat /></div> */}
+          <div className="icon"><FaHeartbeat /></div>
           <p>Deliver you a workout routine tailored to your goals</p>
         </div>
         <div className="iconAndText">
           <div className="icon">
-            <progressIcon />
+            {/* <ProgressIcon /> */}
+            <FaChartLine />
           </div>
           <p>Keep track of your progress as you get healthier</p>
         </div>
