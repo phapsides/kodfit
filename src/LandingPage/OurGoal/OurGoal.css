@@ -1,0 +1,51 @@
+.OurGoal {
+    text-align: center;
+}
+
+.OurGoal h1 {
+    margin: 0;
+}
+
+.OurGoal hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.OurGoal .container {
+    background-color: grey;
+    width: 100%;
+    height: 300px;
+}
+
+.OurGoal .container .iconAndText {
+    border: thin blue solid;
+    display: flex;
+    align-items: center;
+}
+
+.OurGoal .container .iconAndText .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: thin red solid;
+    border-radius: 50%;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+
+}
+
+.OurGoal .image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.OurGoal .text {
+    position: relative;
+}
+
+.OurGoal button {
+    width: 60%;
+    background-color: azure;
+}
