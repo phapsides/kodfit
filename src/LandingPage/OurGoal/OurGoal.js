@@ -2,7 +2,7 @@ import React from "react";
 import "./OurGoal.css";
 // import motivational from "../../common/images/ourGoal-motivational.jpg";
 // import jogger from "../../common/images/female-jogger.jpg";
-// import swimmer from "../../common/images/ourGoal-swimming.jpg";
+import swimmer from "../../common/images/ourGoal-swimming.jpg";
 import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
 
 export default function OurGoal() {
@@ -11,30 +11,34 @@ export default function OurGoal() {
       <h1>Our Goal</h1>
       <hr />
       <p>
-        Our goal is to put you in touch with the gyms and trainers nearby. In
-        the age of Kodfit, winning is easier than ever before.{" "}
+        Our goal is to put you in touch with gyms and personal trainers nearby.
+        In the age of Kodfit, winning is easier than ever before.
       </p>
 
       <div className="container">
-        {/* <img className="image" src={swimmer} alt="Swimmer" /> */}
-        <div className="iconAndText">
-          <div className="icon">
-            <FaDumbbell />
+        <div className="overlay">
+          <div className="iconAndText">
+            <div className="icon">
+              <FaDumbbell />
+            </div>
+            <p>Put you in touch with gyms and trainers nearby</p>
           </div>
-          <p>Put you in touch with gyms and trainers nearby</p>
-        </div>
-        <div className="iconAndText">
-          {/* <div className="icon"><FaHeartbeat /></div> */}
-          <div className="icon"><FaHeartbeat /></div>
-          <p>Deliver you a workout routine tailored to your goals</p>
-        </div>
-        <div className="iconAndText">
-          <div className="icon">
-            {/* <ProgressIcon /> */}
-            <FaChartLine />
+          <div className="iconAndText">
+            {/* <div className="icon"><FaHeartbeat /></div> */}
+            <div className="icon">
+              <FaHeartbeat />
+            </div>
+            <p>Deliver you a workout routine tailored to your goals</p>
           </div>
-          <p>Keep track of your progress as you get healthier</p>
+          <div className="iconAndText">
+            <div className="icon">
+              {/* <ProgressIcon /> */}
+              <FaChartLine />
+            </div>
+            <p>Keep track of your progress as you get healthier</p>
+          </div>
         </div>
+        <img className="image" src={swimmer} alt="Swimmer" />
       </div>
 
       <p>
