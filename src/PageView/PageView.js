@@ -11,6 +11,7 @@ import NearMe from './NearMe/NearMe';
 import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
+import OurGoal from '../LandingPage/OurGoal/OurGoal';
 
 
 export default function PageView() {
@@ -26,6 +27,7 @@ export default function PageView() {
       <Route path="/tracker" exact component={Tracker} />
       <Route path="/login" exact component={Login} />
       <Route path="/timer" exact component={Timer} />
+      <Route path="/our-goal" exact component={OurGoal} />
       <NavBar />
     </Router>
   )

@@ -1,0 +1,21 @@
+.OurGoal {
+    text-align: center;
+}
+
+.OurGoal h1 {
+    margin: 0;
+}
+
+.OurGoal hr {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.OurGoal .container {
+    border: 12px green dotted;
+}
+
+.OurGoal button {
+    width: 60%;
+    background-color: azure;
+}
