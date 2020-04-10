@@ -12,7 +12,30 @@
 }
 
 .OurGoal .container {
-    border: 12px green dotted;
+    background-color: grey;
+    width: 100%;
+    height: 300px;
+}
+
+.OurGoal .container .iconAndText {
+    border: thin blue solid;
+    display: flex;
+}
+
+.OurGoal .container .iconAndText .icon {
+    border: thin red solid;
+    width: 20%;
+
+}
+
+.OurGoal .image {
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.OurGoal .text {
+    position: relative;
 }
 
 .OurGoal button {
