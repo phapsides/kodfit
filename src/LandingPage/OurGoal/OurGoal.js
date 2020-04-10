@@ -2,8 +2,10 @@ import React from "react";
 import "./OurGoal.css";
 // import motivational from "../../common/images/ourGoal-motivational.jpg";
 // import jogger from "../../common/images/female-jogger.jpg";
-import swimmer from "../../common/images/ourGoal-swimming.jpg";
+// import swimmer from "../../common/images/ourGoal-swimming.jpg";
 import { FaDumbbell } from "react-icons/fa";
+import { ReactComponent as progressIcon } from "../../common/images/progress-icon.svg";
+import { ReactComponent as heartbeatIcon } from "../../common/images/heartbeat-icon.svg";
 
 export default function OurGoal() {
   return (
@@ -18,17 +20,20 @@ export default function OurGoal() {
       <div className="container">
         {/* <img className="image" src={swimmer} alt="Swimmer" /> */}
         <div className="iconAndText">
-          <div className="icon"></div>
-          <p>Put you in touch with gyms and trainers nearby.</p>
+          <div className="icon">
+            <FaDumbbell />
+          </div>
+          <p>Put you in touch with gyms and trainers nearby</p>
         </div>
         <div className="iconAndText">
-          <div className="icon">heartbeat icon</div>
-          <p>-Deliver you a workout routine tailored to your goals.</p>
+          <div className="icon"><heartbeatIcon /></div>
+          <p>Deliver you a workout routine tailored to your goals</p>
         </div>
         <div className="iconAndText">
-          <div className="icon">icon dumbbell</div>
-          <p>  icon rising stock - Keep track of your progress as
-</p>
+          <div className="icon">
+            <progressIcon />
+          </div>
+          <p>Keep track of your progress as you get healthier</p>
         </div>
       </div>
 
