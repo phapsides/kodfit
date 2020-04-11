@@ -31,7 +31,7 @@ export default function OurGoal() {
               <FaHeartbeat />
             </div>
             <p className="slidingText animated fadeInRight delay-2s">
-              ...Deliver you a workout routine tailored to your goals
+              ...Deliver a workout routine tailored to your goals
             </p>
           </div>
           <div className="iconAndText">
@@ -47,12 +47,12 @@ export default function OurGoal() {
         <img className="image" src={jogger} alt="Jogger" />
       </div>
     
-      <p>
+      <p className="quote">
         The fitter, stronger you is closer than you think
       </p>
       <Link to="/near-me-gyms">
         <button className="hvr-shutter-out-horizontal">
-          Find your nearest gyms!
+          Find your nearest gym!
         </button>
       </Link>
       <Link to="/near-me-trainers">

@@ -1,6 +1,7 @@
 .OurGoal {
     text-align: center;
     --icon-dimensions: 30px;
+    --mobile-icon-dimensions: 20px;
 }
 
 .OurGoal h1 {
@@ -18,62 +19,47 @@
 }
 
 .OurGoal .container {
-    /* background-color: grey; */
     width: 100%;
-    /* height: 300px; */
-    border: thin orange dashed;
     position: relative;
+}
+
+.OurGoal .image {
+    width: 100%;
 }
 
 .OurGoal .overlay {
     position: absolute;
-    display: grid;
-    grid-template-rows: repeat(3, 1fr);
-    flex-direction: column;
-    height: 70%;
-    bottom: 0;
+    height: 100%;
+    padding-top: 80px;
     width: 220px;
-    border: 3px ridge brown;
+    /* border: 3px ridge brown; */
 }
 
 .OurGoal .iconAndText {
-    border: thin blue solid;
+    /* border: thin blue solid; */
     display: flex;
-    align-items: center;
-    margin-left: 10px;
-    height: 33%;
+    /* align-items: center; */
+    margin-left: 5px;
 }
-
-.OurGoal .image {
-    /* width: 100%; */
-    /* height: 100%; */
-    /* opacity: 0.7; */
-}
-
 
 .OurGoal .icon {
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
-    border: thin white solid;
-    color: white;
-    width: 20px;
-    height: 20px;
+    color: lightgoldenrodyellow;
     /* box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.56); */
 }
 
 .OurGoal .iconAndText .slidingText {
-    color: wheat;
-    border: thin white solid;
-    /* width: 40%; */
+    /* border: thin white solid; */
+    color: lightgoldenrodyellow;
     padding-left: 10px;
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 
 .OurGoal button {
-    width: 80%;
+    width: 60%;
     background-color: rgb(5, 179, 179);
     border-radius: 5%;
     padding: 10px;
@@ -82,6 +68,9 @@
 }
 
 @media (min-width: 600px) {
+    .OurGoal {
+        padding-bottom: 100px;
+    }
     .OurGoal h1 {
         font-size: 50px;
     }
@@ -89,17 +78,14 @@
         font-size: 15px;
     }
     .OurGoal .overlay {
-        height: 100%;
-        border: 3px ridge brown;
+        width: 50%;
     }
     .OurGoal .iconAndText {
-        border: 2px orange dashed;
         width: 600px;
         height: 200px;
     }
     .OurGoal .iconAndText .slidingText {
-        font-size: 20px;
-        border:thin black solid;
+        font-size: 25px;
         width: 100%;
         margin-right: 60px;
     }
@@ -113,5 +99,12 @@
         width: var(--icon-dimensions);
         height: var(--icon-dimensions);
     }
-
+    .OurGoal .quote {
+        font-size: 20px;
+        padding-top: 20px;
+    }
+    .OurGoal button {
+        font-size: 20px;
+        padding: 10px;
+    }
 }
