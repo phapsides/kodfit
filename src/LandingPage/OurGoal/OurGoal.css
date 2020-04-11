@@ -20,28 +20,29 @@
 }
 
 
-.OurGoal .container .iconAndText {
-    border: thin blue solid;
+.OurGoal .iconAndText {
+    /* border: thin blue solid; */
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
-.OurGoal .container .overlay {
+.OurGoal .overlay {
     position: absolute;
     opacity: 1;
     display: flex;
     flex-direction: column;
-    border: thin yellow double;
+    /* border: thin yellow double; */
 }
 
 .OurGoal .image {
-    width: 100%;
-    height: 100%;
+    /* width: 100%; */
+    /* height: 100%; */
     /* opacity: 0.7; */
 }
 
 
-.OurGoal .container .iconAndText .icon {
+.OurGoal .icon {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,9 +52,12 @@
     height: 50px;
 }
 
-.OurGoal .container .iconAndText p {
-    /* color: white; */
+.OurGoal .iconAndText p {
+    color: wheat;
     /* border: thin white solid; */
+    width: 40%;
+    padding-left: 10px;
+    font-size: 14px
 }
 
 .OurGoal button {

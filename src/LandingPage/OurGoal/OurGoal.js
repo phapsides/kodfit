@@ -1,9 +1,10 @@
 import React from "react";
 import "./OurGoal.css";
 // import motivational from "../../common/images/ourGoal-motivational.jpg";
-// import jogger from "../../common/images/female-jogger.jpg";
-import swimmer from "../../common/images/ourGoal-swimming.jpg";
+import jogger from "../../common/images/female-jogger.jpg";
+// import swimmer from "../../common/images/ourGoal-swimming.jpg";
 import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
+import 'animate.css';
 
 export default function OurGoal() {
   return (
@@ -18,27 +19,26 @@ export default function OurGoal() {
       <div className="container">
         <div className="overlay">
           <div className="iconAndText">
-            <div className="icon">
+            <div className="icon animated fadeInLeft delay-1s">
               <FaDumbbell />
             </div>
-            <p>Put you in touch with gyms and trainers nearby</p>
+            <p className="animated fadeInRight delay-1s">...Put you in touch with gyms and trainers nearby</p>
           </div>
           <div className="iconAndText">
-            {/* <div className="icon"><FaHeartbeat /></div> */}
-            <div className="icon">
+            <div className="icon animated fadeInLeft delay-2s">
               <FaHeartbeat />
             </div>
-            <p>Deliver you a workout routine tailored to your goals</p>
+            <p className="animated fadeInRight delay-2s">...Deliver you a workout routine tailored to your goals</p>
           </div>
           <div className="iconAndText">
-            <div className="icon">
+            <div className="icon animated fadeInLeft delay-3s">
               {/* <ProgressIcon /> */}
               <FaChartLine />
             </div>
-            <p>Keep track of your progress as you get healthier</p>
+            <p className="animated fadeInRight delay-3s">...Keep track of your progress as you get healthier</p>
           </div>
         </div>
-        <img className="image" src={swimmer} alt="Swimmer" />
+        <img className="image" src={jogger} alt="Jogger" />
       </div>
 
       <p>
