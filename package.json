@@ -39,6 +39,5 @@
     ]
   },
   "devDependencies": {
-    "@svgr/webpack": "^5.3.1"
   }
 }
