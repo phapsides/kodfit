@@ -5,6 +5,7 @@ import jogger from "../../common/images/female-jogger.jpg";
 // import swimmer from "../../common/images/ourGoal-swimming.jpg";
 import { FaDumbbell, FaChartLine, FaHeartbeat } from "react-icons/fa";
 import 'animate.css';
+import 'hover.css';
 
 export default function OurGoal() {
   return (
@@ -45,8 +46,8 @@ export default function OurGoal() {
         {" "}
         The fitter, stronger you is closer than you think! (Link to Nearby Gyms)
       </p>
-      <button>Find your nearest gyms!</button>
-      <button>Find your nearest personal trainer!</button>
+      <button className="hvr-shutter-out-horizontal">Find your nearest gyms!</button>
+      <button className="hvr-shutter-out-horizontal">Find your nearest personal trainer!</button>
     </div>
   );
 }
