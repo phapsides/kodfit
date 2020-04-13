@@ -62,8 +62,6 @@
     }
     .OurGoal .iconAndText .slidingText {
         font-size: 18px;
-        /* width:60%; */
-        /* margin-right: 60px; */
     }
     .OurGoal .icon svg {
         width: var(--icon-dimensions);
