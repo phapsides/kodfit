@@ -15,7 +15,6 @@ export default function OurGoal() {
         Our goal is to put you in touch with gyms and personal trainers nearby.
         In the age of Kodfit, winning is easier than ever before.
       </p>
-
       <div className="container">
         <div className="overlay">
           <div className="iconAndText">

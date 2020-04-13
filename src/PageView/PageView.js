@@ -12,11 +12,12 @@ import Tracker from './Tracker/Tracker';
 import Login from './Login/Login';
 import Timer from './Timer/Timer';
 import OurGoal from '../LandingPage/OurGoal/OurGoal';
-
+import LandingPage from '../LandingPage/LandingPage';
 
 export default function PageView() {
   return (
     <Router>
+      <Route path="/" exact component={LandingPage} />
       <Route path="/calendar" exact component={CalendarApp} />
       <Route path="/near-me" exact component={NearMe} />
       <Route path="/near-me-gyms" exact component={NearMeGyms} />
@@ -30,5 +31,5 @@ export default function PageView() {
       <Route path="/our-goal" exact component={OurGoal} />
       <NavBar />
     </Router>
-  )
+  );
 }
