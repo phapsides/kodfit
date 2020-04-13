@@ -1,6 +1,5 @@
 import React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import NavBar from './NavBar/NavBar';
 import CalendarApp from './CalendarApp/CalendarApp';
 import NearMeGyms from './NearMe/NearMeGyms/NearMeGyms';
 import NearMeTrainers from './NearMe/NearMeTrainers/NearMeTrainers';
@@ -29,7 +28,6 @@ export default function PageView() {
       <Route path="/login" exact component={Login} />
       <Route path="/timer" exact component={Timer} />
       <Route path="/our-goal" exact component={OurGoal} />
-      <NavBar />
     </Router>
   );
 }

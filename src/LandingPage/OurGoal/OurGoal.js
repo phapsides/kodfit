@@ -10,7 +10,6 @@ export default function OurGoal() {
   return (
     <div className="OurGoal">
       <h1>Our Goal</h1>
-      <hr />
       <p className="subtext">
         Our goal is to put you in touch with gyms and personal trainers nearby.
         In the age of Kodfit, winning is easier than ever before.

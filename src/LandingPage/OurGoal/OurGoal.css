@@ -2,55 +2,57 @@
     text-align: center;
     --icon-dimensions: 30px;
     --mobile-icon-dimensions: 20px;
+    /* border: thin blue solid; */
 }
 
 .OurGoal h1 {
     margin: 0;
 }
 
-.OurGoal hr {
-    width: 50%;
-    margin: 0 auto;
-}
-
 .OurGoal .subtext {
-    font-size: 10px;
+    font-size: 14px;
     padding: 0 10px;
 }
 
 .OurGoal .container {
-    width: 100%;
+    /* width: 100%; */
     position: relative;
+    /* border: thin green solid; */
 }
 
 .OurGoal .image {
-    width: 100%;
+    /* width: 100%; */
 }
 
 .OurGoal .overlay {
     position: absolute;
     height: 100%;
-    padding-top: 80px;
-    width: 220px;
+    /* padding-right: 10px; */
+     margin-left: 5px;
+    /* margin: 0px 5px; */
+    width: 200px;
+    /* border: thin red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 .OurGoal .iconAndText {
-    display: flex;
-    margin-left: 5px;
+    /* display: flex; */
 }
 
 .OurGoal .icon {
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     color: lightgoldenrodyellow;
 }
 
 .OurGoal .iconAndText .slidingText {
     color: lightgoldenrodyellow;
-    padding-left: 10px;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: bold;
+    margin: 6px;
 }
 
 .OurGoal button {
@@ -69,24 +71,25 @@
         font-size: 50px;
     }
     .OurGoal .subtext {
-        font-size: 15px;
+        font-size: 18px;
     }
     .OurGoal .overlay {
         width: 50%;
+        /* margin: 0; */
+        padding: 0;
     }
     .OurGoal .iconAndText {
-        width: 600px;
-        height: 200px;
+        /* width: 100%; */
+        /* height: 200px; */
     }
     .OurGoal .iconAndText .slidingText {
-        font-size: 25px;
-        width: 100%;
-        margin-right: 60px;
+        font-size: 21px;
+        /* width:60%; */
+        /* margin-right: 60px; */
     }
-
     .OurGoal .icon {
-        width: 100px;
-        height: 100px;
+        /* width: 100px; */
+        /* height: 100px; */
     }
     .OurGoal .icon svg {
         width: var(--icon-dimensions);
