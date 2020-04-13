@@ -1,8 +1,6 @@
 .OurGoal {
     text-align: center;
     --icon-dimensions: 30px;
-    --mobile-icon-dimensions: 20px;
-    /* border: thin blue solid; */
 }
 
 .OurGoal h1 {
@@ -15,35 +13,24 @@
 }
 
 .OurGoal .container {
-    /* width: 100%; */
     position: relative;
-    /* border: thin green solid; */
-}
-
-.OurGoal .image {
-    /* width: 100%; */
 }
 
 .OurGoal .overlay {
     position: absolute;
     height: 100%;
-    /* padding-right: 10px; */
      margin-left: 5px;
-    /* margin: 0px 5px; */
     width: 200px;
-    /* border: thin red solid; */
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
 }
 
 .OurGoal .iconAndText {
-    /* display: flex; */
 }
 
 .OurGoal .icon {
     display: flex;
-    /* align-items: center; */
     justify-content: center;
     color: lightgoldenrodyellow;
 }
@@ -75,29 +62,19 @@
     }
     .OurGoal .overlay {
         width: 50%;
-        /* margin: 0; */
-        padding: 0;
-    }
-    .OurGoal .iconAndText {
-        /* width: 100%; */
-        /* height: 200px; */
     }
     .OurGoal .iconAndText .slidingText {
-        font-size: 21px;
+        font-size: 18px;
         /* width:60%; */
         /* margin-right: 60px; */
-    }
-    .OurGoal .icon {
-        /* width: 100px; */
-        /* height: 100px; */
     }
     .OurGoal .icon svg {
         width: var(--icon-dimensions);
         height: var(--icon-dimensions);
     }
     .OurGoal .quote {
-        font-size: 20px;
-        padding-top: 20px;
+        font-size: 25px;
+        margin-top: 30px;
     }
     .OurGoal button {
         font-size: 20px;
