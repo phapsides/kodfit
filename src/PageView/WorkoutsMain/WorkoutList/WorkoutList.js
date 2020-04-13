@@ -1,15 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import './WorkoutList.css';
 import SwipeableViews from 'react-swipeable-views';
+// import ExercisesData from './../../../Data/ExercisesData';
+// import ExerciseList from './../WorkoutExerciseList/WorkoutExerciseList';
 
 const styles = {
     slide: {
-        padding: 15,
         minHeight: 100,
         color: '#fff',
     },
     slide1: {
-        background: '#FEA900',
+        // backgroundImage: 'url(./../../../common/about.jpg)',
+        background: '#B3DC4A',
     },
     slide2: {
         background: '#B3DC4A',
@@ -63,13 +65,25 @@ export default function WorkoutList() {
 
     return (
         dimensions.width >= isMobile ? 
-            <h1>Desktop</h1> : 
+            <h1>Desktop component</h1> : 
             <div className="WorkoutList">
                 <h2 className="WorkoutListTitle">Exercise List</h2>
                 <SwipeableViews 
                     enableMouseEvents 
                     className="container"
                 >
+                    {/* {
+                        ExercisesData().map((exercise) => {
+                            return (
+                                <ExerciseList
+                                    key={exercise.exerciseName}
+                                    exerciseName={exercise.exerciseName}
+                                    reps={exercise.reps}
+                                    style={Object.assign({}, styles.slide, styles.slide1)}
+                              />
+                            );
+                          })
+                    } */}
                     <div
                         className="container-content"
                         style={Object.assign({}, styles.slide, styles.slide1)}
