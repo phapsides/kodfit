@@ -24,7 +24,7 @@
     background-color: rgb(72, 163, 248);
 }
 
-.WorkoutsList .containerBottom {
+.WorkoutList .container-content {
     display: flex;
     flex-direction: column;
     margin: 30px 2%;

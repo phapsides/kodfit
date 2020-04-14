@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './WorkoutList.css';
 import SwipeableViews from 'react-swipeable-views';
-// import ExercisesData from './../../../Data/ExercisesData';
-// import ExerciseList from './../WorkoutExerciseList/WorkoutExerciseList';
+import ExercisesData from './../../../Data/ExercisesData';
+import ExerciseList from './../WorkoutExerciseList/WorkoutExerciseList';
+import test from './../../../common/images/about.jpg';
 
 const styles = {
     slide: {
@@ -10,8 +11,7 @@ const styles = {
         color: '#fff',
     },
     slide1: {
-        // backgroundImage: 'url(./../../../common/about.jpg)',
-        background: '#B3DC4A',
+        backgroundImage: `url(${test})`,
     },
     slide2: {
         background: '#B3DC4A',
@@ -72,54 +72,19 @@ export default function WorkoutList() {
                     enableMouseEvents 
                     className="container"
                 >
-                    {/* {
-                        ExercisesData().map((exercise) => {
+                    {
+                        ExercisesData().map((exercise, index) => {
                             return (
                                 <ExerciseList
                                     key={exercise.exerciseName}
                                     exerciseName={exercise.exerciseName}
                                     reps={exercise.reps}
-                                    style={Object.assign({}, styles.slide, styles.slide1)}
+                                    style={Object.assign({}, styles.slide, styles[`slide${index+1}`])}
                               />
                             );
                           })
-                    } */}
-                    <div
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide1)}
-                    >
-                        Exercise list A
-                    </div>
-                    <div 
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide2)}
-                    >
-                        Exercise list B
-                    </div>
-                    <div 
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide3)}
-                    >
-                        Exercise list C
-                    </div>
-                    <div 
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide4)}
-                    >
-                        Exercise list D
-                    </div>
-                    <div 
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide5)}
-                    >
-                        Exercise list E
-                    </div>
-                    <div 
-                        className="container-content"
-                        style={Object.assign({}, styles.slide, styles.slide6)}
-                    >
-                        Exercise list F
-                    </div>
+                    }
+
                 </SwipeableViews>
             </div>
     ); 

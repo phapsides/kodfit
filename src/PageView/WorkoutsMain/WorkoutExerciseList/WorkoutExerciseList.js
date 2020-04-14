@@ -5,10 +5,12 @@ import './WorkoutExerciseList.css';
 export default class ExerciseList extends React.Component {
 
   render() {
-    let { exerciseName, reps} = this.props;
+    let { exerciseName, reps, style } = this.props;
 
     return (
-          <div className="item">
+          <div 
+          style={style}
+          className="item">
             <p className="detailsName">{exerciseName}</p>
             <p className="detailsReps">{reps}</p>
           </div>
