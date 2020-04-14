@@ -34,7 +34,7 @@ export default function PageView() {
       <Route path="/dashboard/stopwatch" exact component={StopWatch} />
       <Route path="/dashboard/:slug" exact component={Navbar} />
       <Route path="/dashboard/profile" exact component={ProfilePageView} />
-      <Route path="/elements" exact component={Elements} />
+      <Route path="/dashboard/elements" exact component={Elements} />
     </Router>
   );
 }
