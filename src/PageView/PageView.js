@@ -14,6 +14,7 @@ import OurGoal from '../LandingPage/OurGoal/OurGoal';
 import LandingPage from '../LandingPage/LandingPage';
 import StopWatch from './Timer/StopWatch/StopWatch';
 import Navbar from './NavBar/NavBar';
+import Elements from './Elements/Elements';
 
 export default function PageView() {
   return (
@@ -31,6 +32,7 @@ export default function PageView() {
       <Route path="/timer" exact component={Timer} />
       <Route path="/our-goal" exact component={OurGoal} />
       <Route path="/stopwatch" exact component={StopWatch} />
+      <Route path="/elements" exact component={Elements} />
       <Navbar />
     </Router>
   );
