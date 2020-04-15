@@ -4,14 +4,15 @@
     height: 600px;
 }
 
-.NearMeGyms .buttons {
+.NearMeGyms .switch-buttons {
     display: flex;
     margin: 10px;
 }
 
-.NearMeGyms button {
+.NearMeGyms .toggleQuery {
     font-size: 15px;
     padding: 5px;
+    box-shadow: 2px 2px 2px silver;
 }
 
 .NearMeGyms .list {
@@ -39,20 +40,6 @@
     height: 300px;
 }
 
-.NearMeGyms .switch-buttons {
-    display: flex;
-    flex-direction: column;
-}
-
-.NearMeGyms .switch-buttons label{
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.NearMeGyms .switch-toggle {
-    height: 15px;
-}
 @media (min-width: 600px) {
     .NearMeGyms .containerOne {
         grid-template-columns: 2fr 1fr;

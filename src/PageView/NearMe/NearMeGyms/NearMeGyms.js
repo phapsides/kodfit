@@ -70,9 +70,9 @@ export default function NearMeGyms() {
           </LoadScript>
         </div>
 
-<div className="buttons">
-                      <button className="setQuery" onClick={() => updateQuery('gym', 'Gyms')}>Find your nearest gym</button>
-                      <button className="setQuery" onClick={() => updateQuery('personal+trainer', 'Personal Trainers')}>Find your nearest personal trainer</button>
+<div className="switch-buttons">
+                      <button className="toggleQuery" onClick={() => updateQuery('gym', 'Gyms')}>Find your nearest gym</button>
+                      <button className="toggleQuery" onClick={() => updateQuery('personal+trainer', 'Personal Trainers')}>Find your nearest personal trainer</button>
 </div>
 
         <div className="list containerOne-content">
