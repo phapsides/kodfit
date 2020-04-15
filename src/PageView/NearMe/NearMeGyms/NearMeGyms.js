@@ -35,10 +35,6 @@ export default function NearMeGyms() {
     })();
   }, [location, query]);
 
-  useEffect(() => {
-    console.log(data)
-  })
-
   const updateQuery = (query, title) => {
     setQuery(query);
     setTitle(title);
