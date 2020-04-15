@@ -32,6 +32,10 @@ export default function NearMeGyms() {
     })();
   }, [location]);
 
+  useEffect(() => {
+    console.log(data)
+  })
+
   return (
     <div className="NearMeGyms">
       <div className="containerOne">
@@ -61,10 +65,15 @@ export default function NearMeGyms() {
         <div className="list containerOne-content">
           <h3 className="listTitle">List of Gyms</h3>
           <ul className="listContent">
-            <li className="listContent-item">gym A</li>
-            <li className="listContent-item">gym B</li>
-            <li className="listContent-item">gym C</li>
-            <li className="listContent-item">gym D</li>
+            {
+              data && data.map((gym, index) => (
+              <li key="gym.title" className="listContent-item">
+                {index + 1}. {gym.title}
+                <br />
+                Distance: {gym.distance}m
+              </li>
+              ))
+            }
           </ul>
         </div>
       </div>
