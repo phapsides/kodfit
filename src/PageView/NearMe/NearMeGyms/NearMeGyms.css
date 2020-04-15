@@ -4,6 +4,16 @@
     height: 600px;
 }
 
+.NearMeGyms .buttons {
+    display: flex;
+    margin: 10px;
+}
+
+.NearMeGyms button {
+    font-size: 15px;
+    padding: 5px;
+}
+
 .NearMeGyms .list {
     position: relative;
     text-align: left;		

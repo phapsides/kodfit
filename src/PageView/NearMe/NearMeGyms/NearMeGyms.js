@@ -11,6 +11,9 @@ export default function NearMeGyms() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
   const [markerId, setMarkerId] = useState('')
+  const [query, setQuery] = useState('gym')
+  const [title, setTitle] = useState('Gyms')
+
   useEffect(() => {
     let successPosition = (position) => {
       setLocation({
@@ -25,16 +28,21 @@ export default function NearMeGyms() {
   useEffect(() => {
     (async () => {
       const response = await fetch(
-        `https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=gym&limit=15&apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4`
+        `https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=${query}&limit=15&apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4`
       );
       const result = await response.json();
       setData(result.items);
     })();
-  }, [location]);
+  }, [location, query]);
 
   useEffect(() => {
     console.log(data)
   })
+
+  const updateQuery = (query, title) => {
+    setQuery(query);
+    setTitle(title);
+  }
 
   return (
     <div className="NearMeGyms">
@@ -62,8 +70,13 @@ export default function NearMeGyms() {
           </LoadScript>
         </div>
 
+<div className="buttons">
+                      <button className="setQuery" onClick={() => updateQuery('gym', 'Gyms')}>Find your nearest gym</button>
+                      <button className="setQuery" onClick={() => updateQuery('personal+trainer', 'Personal Trainers')}>Find your nearest personal trainer</button>
+</div>
+
         <div className="list containerOne-content">
-          <h3 className="listTitle">List of Gyms</h3>
+                    <h3 className="listTitle">List of {title}</h3>
           <ul className="listContent">
             {
               data && data.map((gym, index) => (
