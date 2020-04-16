@@ -90,6 +90,8 @@ export default function NearMeGyms() {
                     {index + 1}. {gym.title}
                     <br />
                     Distance: {gym.distance}m
+                    <br />
+                    {gym.contacts && `Contact: ${gym.contacts[0].phone[0].value}`}
                   </li>
                 ))}
             </ul>
