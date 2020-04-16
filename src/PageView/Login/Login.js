@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React from 'react';
 import './Login.css';
 import InputBox from './InputBox/InputBox';
 import kodfit_logo from './../../common/images/kodfit_logo_large.svg';
