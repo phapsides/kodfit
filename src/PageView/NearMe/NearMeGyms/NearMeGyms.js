@@ -6,9 +6,9 @@ import InfoWindows from "./InfoWindows/InfoWindows";
 export default function NearMeGyms() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
-  const [markerId, setMarkerId] = useState("");
-  const [query, setQuery] = useState("gym");
-  const [title, setTitle] = useState("Gyms");
+  const [markerId, setMarkerId] = useState('');
+  const [query, setQuery] = useState('gym');
+  const [title, setTitle] = useState('Gyms');
 
   useEffect(() => {
     let successPosition = (position) => {
@@ -21,11 +21,13 @@ export default function NearMeGyms() {
     navigator.geolocation.getCurrentPosition(successPosition, errorHandle);
   }, []);
 
+  let endpoint = 'https://discover.search.hereapi.com/v1/discover';
+  let queryParams = `at=${location.lat},${location.lng}&q=${query}&limit=15`;
+  let apiKEy = 'apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4';
+
   useEffect(() => {
     (async () => {
-      const response = await fetch(
-        `https://discover.search.hereapi.com/v1/discover?at=${location.lat},${location.lng}&q=${query}&limit=15&apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4`
-      );
+      const response = await fetch(`${endpoint}?${queryParams}&${apiKEy}`);
       const result = await response.json();
       setData(result.items);
     })();
