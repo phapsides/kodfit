@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Map.css";
 import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
-import InfoWindows from "../InfoWindows/InfoWindows";
+import InfoWindows from "./InfoWindows/InfoWindows";
 
 export default function Map({ data, location }) {
     const [markerId, setMarkerId] = useState('');

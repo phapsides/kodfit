@@ -5,7 +5,6 @@ import Map from "./Map/Map";
 export default function NearMe() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
-
   const [query, setQuery] = useState("gym");
   const [title, setTitle] = useState("Gyms");
   let endpoint = "https://discover.search.hereapi.com/v1/discover";
@@ -29,13 +28,13 @@ export default function NearMe() {
       const result = await response.json();
       setData(result.items);
     })();
-  }, [location, query]);
+  }, [queryParams]);
 
   const updateQuery = (query, title) => {
     setQuery(query);
     setTitle(title);
   };
-
+  
   return (
     <div className="NearMe">
       <div className="containerOne">
@@ -63,7 +62,7 @@ export default function NearMe() {
             <ul className="listContent">
               {data &&
                 data.map((gym, index) => (
-                  <li key="gym.title" className="listContent-item">
+                  <li key={gym.title} className="listContent-item">
                     {index + 1}. {gym.title}
                     <br />
                     {gym.distance && `Distance: ${gym.distance}m`}
