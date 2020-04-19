@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { GoogleMap, LoadScript, Marker } from "@react-google-maps/api";
 import "./NearMe.css";
-import InfoWindows from "./InfoWindows/InfoWindows";
+import Map from "./Map/Map";
 
 export default function NearMe() {
   const [data, setData] = useState([]);
   const [location, setLocation] = useState({ lat: 51.5007, lng: -0.1246 });
-  const [markerId, setMarkerId] = useState('');
-  const [query, setQuery] = useState('gym');
-  const [title, setTitle] = useState('Gyms');
-  let endpoint = 'https://discover.search.hereapi.com/v1/discover';
+
+  const [query, setQuery] = useState("gym");
+  const [title, setTitle] = useState("Gyms");
+  let endpoint = "https://discover.search.hereapi.com/v1/discover";
   let queryParams = `at=${location.lat},${location.lng}&q=${query}&limit=15`;
-  let apiKEy = 'apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4';
+  let apiKEy = "apiKey=bYn1_nn2_CYDA29oVvcibuL4otpQL3F0HIF5aBnlcW4";
 
   useEffect(() => {
     let successPosition = (position) => {
@@ -40,30 +39,7 @@ export default function NearMe() {
   return (
     <div className="NearMe">
       <div className="containerOne">
-        <div className="map containerOne-content">
-          <LoadScript
-            id="load-script"
-            googleMapsApiKey="AIzaSyAHs3RiKCGgJhll5xXKjLFqprAi6-LW3Rc"
-          >
-            <GoogleMap
-              id="gmap"
-              zoom={13}
-              center={location}
-              mapContainerClassName="map"
-            >
-              {data &&
-                data.map((place) => (
-                  <Marker
-                    key={place.id}
-                    position={place.position}
-                    onClick={() => setMarkerId(place.id)}
-                  >
-                    {markerId === place.id ? <InfoWindows place={place} /> : ""}
-                  </Marker>
-                ))}
-            </GoogleMap>
-          </LoadScript>
-        </div>
+        <Map className="map" data={data} location={location} />
 
         <div className="list-and-buttons">
           <div className="switch-buttons">
@@ -90,9 +66,10 @@ export default function NearMe() {
                   <li key="gym.title" className="listContent-item">
                     {index + 1}. {gym.title}
                     <br />
-                    Distance: {gym.distance}m
+                    {gym.distance && `Distance: ${gym.distance}m`}
                     <br />
-                    {gym.contacts && `Contact: ${gym.contacts[0].phone[0].value}`}
+                    {gym.contacts &&
+                      `Contact: ${gym.contacts[0].phone[0].value}`}
                   </li>
                 ))}
             </ul>
