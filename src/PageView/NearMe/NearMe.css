@@ -4,11 +4,6 @@
     height: 600px;
 }
 
-.NearMe .switch-buttons {
-    display: flex;
-    margin: 10px;
-}
-
 .NearMe .toggleQuery {
     font-size: 15px;
     padding: 5px;
