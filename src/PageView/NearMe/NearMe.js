@@ -30,7 +30,7 @@ export default function NearMe() {
       const result = await response.json();
       setData(result.items);
     })();
-  }, [queryParams]);
+  }, [queryParams, endpoint, apiKEy]);
 
   const updateQuery = (query, title) => {
     setQuery(query);
