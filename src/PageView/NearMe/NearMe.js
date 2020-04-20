@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./NearMe.css";
 import Map from "./Map/Map";
 import List from "./List/List";
-import SwitchButtons from "./SwitchButtons/SwitchButtons";
+import SwitchButton from "./SwitchButton/SwitchButton";
 
 export default function NearMe() {
   const [data, setData] = useState([]);
@@ -39,25 +39,21 @@ export default function NearMe() {
 
   return (
     <div className="NearMe">
-      <div className="containerOne">
         <Map className="map" data={data} location={location} />
-
         <div className="switch-buttons">
-          <SwitchButtons
+          <SwitchButton
             text="gym"
             onClick={() => updateQuery("gym", "Gyms")}
           />
 
-          <SwitchButtons
+          <SwitchButton
             text="personal trainer"
             onClick={() =>
               updateQuery("personal + trainer", "Personal Trainers")
             }
           />
         </div>
-
-        <List title={title} data={data} />
-      </div>
+        <List title={title} data={data} />   
     </div>
   );
 }
