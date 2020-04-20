@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./NearMe.css";
 import Map from "./Map/Map";
+import List from './List/List';
 
 export default function NearMe() {
   const [data, setData] = useState([]);
@@ -57,22 +58,7 @@ export default function NearMe() {
               Find your nearest personal trainer
             </button>
           </div>
-          <div className="list containerOne-content">
-            <h3 className="listTitle">List of {title}</h3>
-            <ul className="listContent">
-              {data &&
-                data.map((gym, index) => (
-                  <li key={gym.title} className="listContent-item">
-                    {index + 1}. {gym.title}
-                    <br />
-                    {gym.distance && `Distance: ${gym.distance}m`}
-                    <br />
-                    {gym.contacts &&
-                      `Contact: ${gym.contacts[0].phone[0].value}`}
-                  </li>
-                ))}
-            </ul>
-          </div>
+              <List title={title} data={data} />
         </div>
       </div>
     </div>
