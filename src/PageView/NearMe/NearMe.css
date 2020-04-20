@@ -14,21 +14,6 @@
     height: 300px;
 }
 
-.NearMe .list {
-    position: relative;
-}
-
-.NearMe .listContent {
-    display: grid;
-    padding-left: 0;
-}
-
-.NearMe .listContent-item {
-    align-items: center;
-    box-shadow: 2px 2px 2px silver;
-    margin-bottom: 8px;
-}
-
 @media (min-width: 600px) {
     
     .NearMe .containerOne {
@@ -42,7 +27,6 @@
     .NearMe .list {
         height: 500px;
         margin: 0 10px;
-        overflow: scroll;
     }
     
 }
