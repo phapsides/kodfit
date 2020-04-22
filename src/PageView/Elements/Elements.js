@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 export default function Elements() {
     return (
@@ -25,18 +26,40 @@ export default function Elements() {
             </div>
             <div className="grid">
                 <div>
-                    <a className="" href="/">Simple Link</a>
-                    <a className="button primary" href="/">Primary</a>
-                    <a className="button secondary" href="/">Secondary</a>
-                    <a className="button success" href="/">Success</a>
-                    <a className="button alert" href="/">Alert</a>
+                    <Link className="" to="/">Simple Link</Link>
+                    <button className="button primary" >
+                        <Link to="/">Primary</Link>
+                    </button>
+                    <button className="button secondary" >
+                        <Link to="/">Secondary</Link>
+                    </button>
+                    <button className="button success" >
+                        <Link to="/">Success</Link>
+                    </button>
+                    <button className="button alert" >
+                        <Link to="/">Alert</Link>
+                    </button>
+                    <button className="button btn-transparent">
+                        <Link to="/">Transparent</Link>
+                    </button>
                 </div>
                 <div>
-                    <a className="" href="/">Simple Link</a>
-                    <a className="button primary rounded-capsule" href="/">Primary</a>
-                    <a className="button secondary rounded-capsule" href="/">Secondary</a>
-                    <a className="button success rounded-capsule" href="/">Success</a>
-                    <a className="button alert rounded-capsule" href="/">Alert</a>
+                    <Link className="rounded-capsule" to="/">Simple Link</Link>
+                    <button className="button primary rounded-capsule">
+                        <Link to="/">Primary</Link>
+                    </button>
+                    <button className="button secondary rounded-capsule">
+                        <Link to="/">Secondary</Link>
+                    </button>
+                    <button className="button success rounded-capsule">
+                        <Link to="/">Success</Link>
+                    </button>
+                    <button className="button alert rounded-capsule">
+                        <Link to="/">Alert</Link>
+                    </button>
+                    <button className="button btn-transparent rounded-capsule">
+                        <Link to="/">Transparent</Link>
+                    </button>
                 </div> 
             </div>
         </div>
