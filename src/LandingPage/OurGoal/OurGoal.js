@@ -1,7 +1,5 @@
 import React from 'react';
 import './OurGoal.css';
-import 'animate.css';
-import 'hover.css';
 import { Link } from "react-router-dom";
 import Goal from "../../common/images/goal.jpg";
 import CentreImage from './CentreImage/CentreImage';
