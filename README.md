@@ -1,7 +1,3 @@
- [![Build Status](Building)](https://github.com/gobuffalo/tags/actions)
- [![Deployed Status](Deployed)](https://goreportcard.com/report/github.com/gobuffalo/tags)
-
-
 # Kodfit
 
 The fitness app that keeps you motivated!
@@ -9,6 +5,11 @@ The fitness app that keeps you motivated!
 ## Deployment
 
 Access Kodfit here: https://kodfit.now.sh/
+
+- [x] Content Added
+- [] Component styles aligned
+- [] Desktop-friendly
+- [] Project Completed
 
 ## Technologies Used
 
