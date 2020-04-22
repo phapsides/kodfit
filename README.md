@@ -16,7 +16,7 @@ Access Kodfit here: https://kodfit.now.sh/
 
 ## Authors
 
-* **Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
+* Adam Zdrzalka - [moderndayNeo](https://github.com/moderndayNeo)
 * **Dan Arango - [Darango84](https://github.com/Darango84)
 * **Minji Jeong - [casey-minzi](https://github.com/casey-minzi)
 * **Ian Molocea - [marianmolocea](https://github.com/marianmolocea)
