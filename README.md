@@ -6,7 +6,7 @@ The fitness app that keeps you motivated!
 
 Access Kodfit here: https://kodfit.now.sh/
 
-## Built With
+## Technologies Used
 
 * HTML
 * CSS
