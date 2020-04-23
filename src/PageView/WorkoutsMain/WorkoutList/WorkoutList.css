@@ -1,12 +1,9 @@
 .App .ExercisesList {
     background-image: url(../../../common/images/backgroundImageWorkouts2.jpg);
-    background-color: #f3ededf6;
-    height: 100vh;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100vh;
+    background-size: cover;
     position: relative;
-    filter: grayscale(90%);
 }
 
 .WorkoutsList .containerTop {
