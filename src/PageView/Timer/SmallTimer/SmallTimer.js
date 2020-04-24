@@ -46,12 +46,12 @@ const SmallTimer = ({ timer, run }) => {
   }
 
   const theTimer = () => {
-    if (timeLeft) {
+    if (timeLeft > -1) {
       if (timeLeft < 60) {
         return `00 : ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
       } else {
         return `${('0' + secondsToTime(timeLeft).m).slice(-2)} :  
-                 ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
+                ${('0' + secondsToTime(timeLeft).s).slice(-2)}`
       }
     } else {
       if (timer < 60) {
@@ -64,7 +64,7 @@ const SmallTimer = ({ timer, run }) => {
   }
 
   useEffect(() => {
-    if (!timeLeft) {
+    if (timeLeft < 0) {
       setRunning(1)
       setTimeLeft(timer)
       return
